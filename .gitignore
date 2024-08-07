@@ -46,8 +46,6 @@ sugar_version.json
 *Mapping.php
 *.sh
 *.bak
-
-!/custom
 custom/application/Ext/*/*.ext.php
 custom/blowfish/*.php
 custom/Extension/application/Ext/*/*.php
