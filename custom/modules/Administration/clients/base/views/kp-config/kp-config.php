@@ -1,0 +1,137 @@
+<?php
+
+$viewdefs['Administration']['base']['view']['kp-config'] = [
+    'template' => 'record',
+    'label' => 'LBL_KP_TITLE',
+    'saveMessage' => 'LBL_KP_SETTING_SAVED',
+    'templateMeta' => [
+        'useTabs' => true,
+    ],
+    'panels' => [
+        [
+            'name' => 'panel_accounts',
+            'label' => 'LBL_KP_ACCOUNTS',
+            'columns' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => [
+                [
+                    'name' => 'kp_accounts_enabled',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_ENABLED',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+                [
+                    'name' => 'kp_accounts_position',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_POSITION',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+            ],
+        ],
+        [
+            'name' => 'panel_contacts',
+            'label' => 'LBL_KP_CONTACTS',
+            'columns' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => [
+                [
+                    'name' => 'kp_contacts_enabled',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_ENABLED', 
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+                [
+                    'name' => 'kp_contacts_position',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_POSITION',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+            ],
+        ],
+        [
+            'name' => 'panel_opportunities',
+            'label' => 'LBL_KP_OPPORTUNITIES',
+            'columns' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => [
+                [
+                    'name' => 'kp_opportunities_enabled',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_ENABLED',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+                [
+                    'name' => 'kp_opportunities_position',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_POSITION',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+            ],
+        ],
+        [
+            'name' => 'panel_product_templates',
+            'label' => 'LBL_KP_PRODUCTTEMPLATES',
+            'columns' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => [
+                [
+                    'name' => 'kp_product_templates_enabled',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_ENABLED',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+                [
+                    'name' => 'kp_product_templates_position',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_POSITION',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+            ],
+        ],
+        [
+            'name' => 'panel_quotes',
+            'label' => 'LBL_KP_QUOTES',
+            'columns' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => [
+                [
+                    'name' => 'kp_quotes_enabled',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_ENABLED',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+                [
+                    'name' => 'kp_quotes_position',
+                    'type' => 'bool',
+                    'label' => 'LBL_KP_POSITION',
+                    'span' => 12,
+                    'labelSpan' => 4,
+                ],
+            ],
+        ],
+    ],
+];

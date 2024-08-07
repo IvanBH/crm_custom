@@ -1,0 +1,51 @@
+<style>
+        .kinetic_baq { padding: 10px; width: 90% !important; margin: 2px auto; border-top: dotted 0px #003865; border-left: dotted 2px #003865; border-right: dotted 2px #003865; border-bottom: dotted 0px #ffffff; background: #f9f9f9; font-size: 12px; color: #009cde; font-weight:bold;}
+        .kinetic_baq .dta_block .dta_lbl { display:inline-block; font-weight: 700; color: #003865; margin-right: 4px; }
+        .kinetic_baq .dta_block .dta_val { display: inline-block; }
+        .kinetic_baq a { color: #ff8200; text-decoration: none; }
+        .kinetic_baq a:hover { color: #009cde; text-decoration: underline; }    
+        
+        body { background-color: #e8e8e8; }
+        thead th { background-color: #009cde; border-top: solid 1px; border-bottom: solid 1px; color: #f9f9f9; font-weight: bold; position: -webkit-sticky; position: sticky; top: 0; z-index: 1; }
+        tbody th { border-top: solid 1px; border-bottom: solid 1px; border-left: solid 1px; border-right: solid 1px; }
+        tbody td { border-top: solid 1px; border-bottom: solid 1px; border-left: solid 1px; border-right: solid 1px; background-color: #e8e8e8; color: #003865; font-weight: bold; }
+        tbody td a { color: #ff8200; text-decoration: none; font-weight: bold; }
+        tbody td a:hover { color: #009cde; font-weight: bold; text-decoration: underline; }    
+</style>
+{{#each baqs}}
+    {{#each [data]}}
+        {{#if ../../this.showastable}}
+                <table class="table table-bordered">
+                <thead>
+                {{#with [record].[0]}}
+                    <tr>
+                        {{#each [columns]}}
+                            <th style="background-color: #009cde; border-top: solid 1px; border-bottom: solid 1px; color: #f9f9f9; font-weight: bold; position: -webkit-sticky; position: sticky; top: 0; z-index: 1; text-align:center">{{[fieldname]}}</th>
+                        {{/each}}
+                    </tr>
+                {{/with}}
+                </thead>
+                <tbody>
+                {{#each [record]}}                
+                    <tr>
+                    {{#each [columns]}}
+                        <td style="text-align:center">{{{[fieldvalue]}}}</td>
+                    {{/each}}
+                    </tr>   
+                {{/each}}
+                </tbody>
+            </table>
+        {{else}}            
+            {{#each [record]}}
+                <div class="row-fluid kinetic_baq">
+                    {{#each [columns]}}
+                        <div class="dta_block"><span class="dta_lbl">{{[fieldname]}}:</span><span class="dta_val">{{{[fieldvalue]}}}</span></div>
+                    {{/each}}
+                </div>
+            {{/each}}
+        {{/if}}
+        {{#unless [record]}}
+        <center>{{str "LBL_NO_DATA_AVAILABLE"}}</center>
+        {{/unless}}        
+    {{/each}}
+{{/each}}
