@@ -4,3 +4,4 @@ $mod_strings['LBL_INDUSTRY'] = 'Sector:';
 $mod_strings['LBL_PHONE_ALT'] = 'Móvil:';
 $mod_strings['LBL_CONTROL_CLIENTE'] = 'control cliente';
 $mod_strings['LBL_NUM_CLIENTE'] = 'num cliente';
+$mod_strings['LBL_NOMBRE_CONTROL'] = 'nombre control';

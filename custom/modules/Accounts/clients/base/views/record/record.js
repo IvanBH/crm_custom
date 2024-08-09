@@ -14,17 +14,16 @@
             
             var rfc = model.get("rfc_c");
            
-            console.log(rfc)
             if(_.isEmpty(rfc)){
                 app.alert.show('rfc_disponible', {
                     level: 'error',
-                    messages: 'El campo RFC se encuentra vacio',
+                    messages: 'El campo RFC se encuentra vacio, NO se sincronizara con epicor',
                     autoClose: false
                 });
             }else if(rfc.length == 12 || rfc.length == 13){
                 app.alert.show('rfc_disponible', {
                     level: 'error',
-                    messages: 'La longitud del rfc es',
+                    messages: 'La longitud del rfc es incorrecta, NO se sincronizara con epicor',
                     autoClose: false
                 });
             } 
